@@ -18,6 +18,7 @@
             coq-json = import ./coq/coq-json.nix { pkgs=pkgs; };
             coq-menhirlib = import ./coq/coq-menhirlib.nix { pkgs=pkgs; };
             coq-parsec = import ./coq/coq-parsec.nix { pkgs=pkgs; };
+            coq-metacoq = import ./coq/coq-metacoq.nix { pkgs=pkgs; };
             telegram-bot-api = import ./telegram/telegram-bot-api.nix { pkgs=pkgs; };
         };
       });
