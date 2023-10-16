@@ -2,7 +2,7 @@
   description = "My personal package collection";
 
   inputs = {
-    nixpkgs.url = "github:nixos/nixpkgs";
+    nixpkgs.url = "github:NixOS/nixpkgs?ref=23.05";
     flake-utils.url = "github:numtide/flake-utils";
   };
   outputs = { self, nixpkgs, flake-utils }:
@@ -12,14 +12,15 @@
       in
       {
         packages = {
-            coq-http = import ./coq/coq-http.nix { pkgs=pkgs; };
-            coq-async-test = import ./coq/coq-async-test.nix { pkgs=pkgs; };
-            coq-ceres = import ./coq/coq-ceres.nix { pkgs=pkgs; };
-            coq-json = import ./coq/coq-json.nix { pkgs=pkgs; };
-            coq-menhirlib = import ./coq/coq-menhirlib.nix { pkgs=pkgs; };
-            coq-parsec = import ./coq/coq-parsec.nix { pkgs=pkgs; };
-            coq-metacoq = import ./coq/coq-metacoq.nix { pkgs=pkgs; };
-            telegram-bot-api = import ./telegram/telegram-bot-api.nix { pkgs=pkgs; };
+          coq-http = import ./coq/coq-http.nix { pkgs=pkgs; };
+          coq-async-test = import ./coq/coq-async-test.nix { pkgs=pkgs; };
+          coq-ceres = import ./coq/coq-ceres.nix { pkgs=pkgs; };
+          coq-json = import ./coq/coq-json.nix { pkgs=pkgs; };
+          coq-menhirlib = import ./coq/coq-menhirlib.nix { pkgs=pkgs; };
+          coq-parsec = import ./coq/coq-parsec.nix { pkgs=pkgs; };
+          coq-metacoq = import ./coq/coq-metacoq.nix { pkgs=pkgs; };
+          coq-elm-extraction = import ./coq/coq-elm-extraction.nix { pkgs=pkgs; };
+          telegram-bot-api = import ./telegram/telegram-bot-api.nix { pkgs=pkgs; };
         };
       });
 }
