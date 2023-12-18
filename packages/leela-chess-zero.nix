@@ -9,7 +9,7 @@ let
   };
 in
 pkgs.stdenv.mkDerivation {
-  name = "leela-chess-zero";
+  name = "lc0";
   src = leela-chess-zero;
   buildInputs = with pkgs; [
     git
