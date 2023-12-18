@@ -20,6 +20,9 @@ pkgs.stdenv.mkDerivation {
     gtest
     ninja
   ];
+  postPatch = ''
+      patchShebangs --build .
+  '';
   nativeBuildInputs = with pkgs; [
     meson
     pkg-config
