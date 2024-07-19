@@ -3,9 +3,8 @@ pkgs.stdenv.mkDerivation {
   name = "message";
   src = ./.;
   buildInputs = with pkgs; [
-      gcc
+     pkgs.glibcLocales 
   ];
-  propagatedBuildInputs = [ pkgs.glibcLocales ];
   buildPhase = ''
     gcc main.c -o message
   '';

@@ -5,9 +5,7 @@
 #include "Bitmap.h"
 
 int main() {
-    //unsigned char line[PARAMOR_FRAME_WIDTH + 1];
-    //line[PARAMOR_FRAME_WIDTH] = '\0';
-    setlocale(LC_ALL, "en_US.UTF-8");
+    setlocale(LC_ALL, "C.UTF-8");
     wchar_t block = L'\u2588';
     for (int i = 0; i < BITMAP_FRAME_HEIGHT; i++) {
         for (int j = 0; j < BITMAP_FRAME_WIDTH; j++) {
