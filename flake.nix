@@ -2,7 +2,7 @@
   description = "My personal package collection";
 
   inputs = {
-    nixpkgs.url = "github:NixOS/nixpkgs?ref=23.05";
+    nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
     flake-utils.url = "github:numtide/flake-utils";
   };
   outputs = { self, nixpkgs, flake-utils }:
@@ -23,7 +23,7 @@
                     if kind == "directory" then
                       (create_package_set new_path)
                     else
-                      (import new_path { pkgs=pkgs; });
+                      (pkgs.callPackage new_path {});
                   corrected_name =
                     if kind == "directory" then
                       name

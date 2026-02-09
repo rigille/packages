@@ -1,10 +1,10 @@
 { pkgs ? import <nixpkgs> {} }:
 let
   leela-chess-zero = pkgs.fetchFromGitHub {
-    owner = "LeelaChessZero";
-    repo = "lc0";
-    rev = "afdd67c2186f1f29893d495750661a871f7aa9ac";
-    sha256 = "sha256-VUTUTYvvE2kGhL1EDmidV2J4/NcNcJb3oh81jsYJyfo=";
+    owner = "danegraphics";
+    repo = "lc0-Dane";
+    rev = "37930b63eb1c57045e43d65138fa685cebd0b806";
+    sha256 = "sha256-dBBeLnWTFWkO+aDHFQKQCSgwOy/rssQjmWPl7zah6dY=";
     fetchSubmodules = true;
   };
 in
